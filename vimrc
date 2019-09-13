@@ -1,5 +1,5 @@
 source ~/.vim/vimrc.bepo
-imap jj <Esc>
+inoremap jj <Esc>
 " yank to clipboard
 if has("clipboard")
   set clipboard=unnamed " copy to the system clipboard
