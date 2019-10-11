@@ -8,3 +8,4 @@ if has("clipboard")
     set clipboard+=unnamedplus
   endif
 endif
+nnoremap <esc> :noh<return><esc>
