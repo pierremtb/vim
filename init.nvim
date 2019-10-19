@@ -14,6 +14,7 @@ call plug#begin(g:plugged_home)
   Plug 'vim-airline/vim-airline'
   Plug 'vim-airline/vim-airline-themes'
   Plug 'ayu-theme/ayu-vim'
+  Plug 'scrooloose/nerdtree'
   " Better Visual Guide
   Plug 'Yggdroot/indentLine'
   " syntax check
@@ -117,3 +118,9 @@ let g:vimtex_compiler_progname = 'nvr'
 " use SumatraPDF if you are on Windows
 " let g:vimtex_view_method = 'skim'
 
+" NERDTree
+:nnoremap <C-p> <C-w>
+nnoremap <C-T> <C-W><C-J>
+nnoremap <C-S> <C-W><C-K>
+nnoremap <C-R> <C-W><C-L>
+nnoremap <C-C> <C-W><C-H>
