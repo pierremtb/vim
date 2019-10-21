@@ -139,3 +139,5 @@ nnoremap <C-C> <C-W><C-H>
 
 " Json quotes
 set conceallevel=0
+
+let g:languagetool_jar='/mnt/c/Users/AP66060/Software/LanguageTool/languagetool-commandline.jar'
