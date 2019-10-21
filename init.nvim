@@ -15,6 +15,7 @@ call plug#begin(g:plugged_home)
   Plug 'vim-airline/vim-airline-themes'
   Plug 'ayu-theme/ayu-vim'
   Plug 'scrooloose/nerdtree'
+  Plug 'dyng/ctrlsf.vim'
   " Better Visual Guide
   Plug 'Yggdroot/indentLine'
   " syntax check
@@ -25,6 +26,8 @@ call plug#begin(g:plugged_home)
   Plug 'ncm2/ncm2-bufword'
   Plug 'ncm2/ncm2-path'
   Plug 'ncm2/ncm2-jedi'
+  " Typescript
+  Plug 'leafgarland/typescript-vim'
   " Formater
   Plug 'Chiel92/vim-autoformat'
   " Latex
@@ -70,9 +73,17 @@ set nowritebackup
 set ignorecase                    " ignore case when searching
 set smartcase                     " turn on smartcase
 " Tab and Indent configuration
+"set expandtab
+"set tabstop=4
+"set shiftwidth=4
+filetype plugin indent on
+" On pressing tab, insert 2 spaces
 set expandtab
-set tabstop=4
-set shiftwidth=4
+" show existing tab with 2 spaces width
+set tabstop=2
+set softtabstop=2
+" when indenting with '>', use 2 spaces width
+set shiftwidth=2
 " vim-autoformat
 noremap <F3> :Autoformat<CR>
 " NCM2
@@ -124,3 +135,6 @@ nnoremap <C-T> <C-W><C-J>
 nnoremap <C-S> <C-W><C-K>
 nnoremap <C-R> <C-W><C-L>
 nnoremap <C-C> <C-W><C-H>
+
+" Json quotes
+set conceallevel=0
