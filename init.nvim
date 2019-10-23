@@ -15,7 +15,10 @@ call plug#begin(g:plugged_home)
   Plug 'vim-airline/vim-airline-themes'
   Plug 'ayu-theme/ayu-vim'
   Plug 'scrooloose/nerdtree'
+  " Handling
   Plug 'dyng/ctrlsf.vim'
+  Plug 'christoomey/vim-tmux-navigator'
+  Plug 'tpope/vim-commentary'
   " Better Visual Guide
   Plug 'Yggdroot/indentLine'
   " syntax check
@@ -32,9 +35,6 @@ call plug#begin(g:plugged_home)
   Plug 'Chiel92/vim-autoformat'
   " Latex
   Plug 'lervag/vimtex'
-  Plug 'Konfekt/FastFold'
-  Plug 'matze/vim-tex-fold'
-  Plug 'tpope/vim-commentary'
   " MATLAB
   function! DoRemote(arg)
     UpdateRemotePlugins
@@ -42,6 +42,7 @@ call plug#begin(g:plugged_home)
   Plug 'daeyun/vim-matlab', { 'do': function('DoRemote') }
 call plug#end()
 filetype plugin indent on
+
 
 " Configurations Part
 " UI configuration
@@ -65,13 +66,16 @@ set mouse=a
 set noshowmode
 set noshowmatch
 set nolazyredraw
+
 " Turn off backup
 set nobackup
 set noswapfile
 set nowritebackup
+
 " Search configuration
 set ignorecase                    " ignore case when searching
 set smartcase                     " turn on smartcase
+
 " Tab and Indent configuration
 "set expandtab
 "set tabstop=4
@@ -84,8 +88,10 @@ set tabstop=2
 set softtabstop=2
 " when indenting with '>', use 2 spaces width
 set shiftwidth=2
+
 " vim-autoformat
 noremap <F3> :Autoformat<CR>
+
 " NCM2
 augroup NCM2
   autocmd!
@@ -107,6 +113,7 @@ augroup NCM2
              \ 'on_complete': ['ncm2#on_complete#omni', 'vimtex#complete#omnifunc'],
              \ })
 augroup END
+
 " Ale
 let g:ale_lint_on_enter = 0
 let g:ale_lint_on_text_changed = 'never'
@@ -114,6 +121,7 @@ let g:ale_echo_msg_error_str = 'E'
 let g:ale_echo_msg_warning_str = 'W'
 let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
 let g:ale_linters = {'python': ['flake8']}
+
 " Airline
 let g:airline_left_sep  = ''
 let g:airline_right_sep = ''
@@ -139,5 +147,3 @@ nnoremap <C-C> <C-W><C-H>
 
 " Json quotes
 set conceallevel=0
-
-let g:languagetool_jar='/mnt/c/Users/AP66060/Software/LanguageTool/languagetool-commandline.jar'
