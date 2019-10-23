@@ -140,10 +140,12 @@ let g:vimtex_compiler_progname = 'nvr'
 noremap U <C-R>
 
 " NERDTree
-nnoremap <C-T> <C-W><C-J>
-nnoremap <C-S> <C-W><C-K>
-nnoremap <C-R> <C-W><C-L>
-nnoremap <C-C> <C-W><C-H>
+let g:NERDTreeMapOpenInTabSilent=''
+let g:NERDTreeMapOpenVSplit='r' 
+let g:NERDTreeMapPreviewVSplit='R' 
+let g:NERDTreeMapOpenSplit='l' 
+let g:NERDTreeMapPreviewSplit='L' 
+let g:NERDTreeMapOpenInTab=''
 
 " Json quotes
 set conceallevel=0
