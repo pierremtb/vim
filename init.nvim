@@ -23,19 +23,17 @@ call plug#begin(g:plugged_home)
   Plug 'Yggdroot/indentLine'
   " syntax check
   Plug 'w0rp/ale'
-  " Autocomplete
+  " VS Code Intellisense
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
-  "Plug 'ncm2/ncm2'
-  "Plug 'roxma/nvim-yarp'
-  "Plug 'ncm2/ncm2-bufword'
-  "Plug 'ncm2/ncm2-path'
-  "Plug 'ncm2/ncm2-jedi'
+  Plug 'neoclide/coc-tsserver', {'do': 'yarn install --frozen-lockfile'}
+  Plug 'neoclide/coc-python', {'do': 'yarn install --frozen-lockfile'}
+  Plug 'fannheyward/coc-texlab', {'do': 'yarn install --frozen-lockfile'}
   " Typescript
   Plug 'leafgarland/typescript-vim'
   " Formater
   Plug 'Chiel92/vim-autoformat'
   " Latex
-  Plug 'lervag/vimtex'
+  " Plug 'lervag/vimtex'
   " MATLAB
   function! DoRemote(arg)
     UpdateRemotePlugins
