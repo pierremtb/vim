@@ -15,6 +15,7 @@ call plug#begin(g:plugged_home)
   Plug 'vim-airline/vim-airline-themes'
   Plug 'ayu-theme/ayu-vim'
   Plug 'scrooloose/nerdtree'
+  Plug 'ctrlpvim/ctrlp.vim'
   " Handling
   Plug 'dyng/ctrlsf.vim'
   Plug 'christoomey/vim-tmux-navigator'
@@ -28,17 +29,8 @@ call plug#begin(g:plugged_home)
   Plug 'neoclide/coc-tsserver', {'do': 'yarn install --frozen-lockfile'}
   Plug 'neoclide/coc-python', {'do': 'yarn install --frozen-lockfile'}
   Plug 'fannheyward/coc-texlab', {'do': 'yarn install --frozen-lockfile'}
-  " Typescript
-  Plug 'leafgarland/typescript-vim'
   " Formater
   Plug 'Chiel92/vim-autoformat'
-  " Latex
-  " Plug 'lervag/vimtex'
-  " MATLAB
-  function! DoRemote(arg)
-    UpdateRemotePlugins
-  endfunction
-  Plug 'daeyun/vim-matlab', { 'do': function('DoRemote') }
 call plug#end()
 filetype plugin indent on
 
@@ -51,6 +43,8 @@ syntax enable
 let base16colorspace=256
 let ayucolor="light"
 colorscheme ayu
+let g:ctrlp_map = '<c-p>'
+
 " True Color Support if it's avaiable in terminal
 if has("termguicolors")
     set termguicolors
