@@ -9,3 +9,4 @@ if has("clipboard")
   endif
 endif
 nnoremap <esc> :noh<return><esc>
+syntax on
