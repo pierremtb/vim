@@ -10,3 +10,4 @@ if has("clipboard")
 endif
 nnoremap <esc> :noh<return><esc>
 syntax on
+set expandtab
