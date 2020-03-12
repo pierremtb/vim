@@ -14,4 +14,5 @@ set expandtab
 
 call plug#begin('~/.vim/plugged')
 Plug 'tpope/vim-commentary'
+Plug 'christoomey/vim-tmux-navigator'
 call plug#end()
