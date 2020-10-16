@@ -1,4 +1,5 @@
-source ~/.vim/vimrc.bepo
+source ~/.vim/vimrc.colemak
+" source ~/.vim/vimrc.bepo
 inoremap jj <Esc>
 " yank to clipboard
 if has("clipboard")
@@ -16,3 +17,5 @@ call plug#begin('~/.vim/plugged')
 Plug 'tpope/vim-commentary'
 Plug 'christoomey/vim-tmux-navigator'
 call plug#end()
+" silent! source "$HOME/.vim/bundle/vim-colemak/plugin/colemak.vim"
+
