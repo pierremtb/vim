@@ -1,4 +1,4 @@
-source ~/.vim/vimrc.colemak
+source ~/pierreFiles/vim/vimrc.colemak
 " source ~/.vim/vimrc.bepo
 inoremap jj <Esc>
 " yank to clipboard
@@ -12,10 +12,13 @@ endif
 nnoremap <esc> :noh<return><esc>
 syntax on
 set expandtab
+set number
 
 call plug#begin('~/.vim/plugged')
 Plug 'tpope/vim-commentary'
 Plug 'christoomey/vim-tmux-navigator'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
 " silent! source "$HOME/.vim/bundle/vim-colemak/plugin/colemak.vim"
 
+let g:coc_disable_startup_warning = 1
