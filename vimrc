@@ -1,4 +1,4 @@
-source ~/.vim/vimrc.colemak
+source ~/pierreFiles/vim/vimrc.colemak
 " source ~/.vim/vimrc.bepo
 inoremap jj <Esc>
 " yank to clipboard
@@ -12,6 +12,7 @@ endif
 " nnoremap <esc> :noh<return><esc>
 syntax on
 set expandtab
+set number
 
 call plug#begin('~/.vim/plugged')
 Plug 'tpope/vim-commentary'
